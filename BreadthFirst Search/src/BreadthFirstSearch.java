@@ -37,6 +37,6 @@ public class BreadthFirstSearch {
 	MCO.connect(PBI);
 	MIA.connect(PBI);
 	
-	graph.routeFromAtoB(HNL, BOS);
+	graph.routeFromAtoB(HNL, PBI); //there's a connection between MIA and PBI but it shows MIA-MCO-PBI
 	} 
 }
