@@ -16,7 +16,7 @@ public class Graph {
 	
 	private void breadthFirstSearch (Node start, Node target){
 		Node curr = start;
-		System.out.println(curr);
+		//System.out.println(curr);
 		visitedNodes.add(curr);
 		
 		if (curr.val.equals(target.val)) {
@@ -27,7 +27,9 @@ public class Graph {
 		for (Node neighbour: curr.edgeList) {
 			if (!visitedNodes.contains(neighbour)) {
 				queue.add(neighbour);
-				neighbour.parent = curr;
+				if(neighbour.parent == null) {
+					neighbour.parent = curr;
+				}
 			}
 		}
 			
@@ -38,8 +40,13 @@ public class Graph {
 		breadthFirstSearch (A, B);
 		findRoute(B);
 		
-		for(Node node: route) {
-			System.out.println(node.val);
+		//reserve order
+//		for(Node node: route) {
+//			System.out.println(node.val);
+//		}
+		
+		for(int i = route.size()-1; i >= 0; i--) {
+			System.out.println(route.get(i).val);
 		}
 	}
 

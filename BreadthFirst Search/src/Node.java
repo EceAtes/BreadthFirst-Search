@@ -28,4 +28,9 @@ public class Node {
 		}
 		return false;
 	}
+	
+//	public String toString() {
+//		return "\nName of the node: " + this.val /*+ "\nNeighbours: " + this.edgeList*/ + 
+//				"\nParent of the node: " + this.parent.val;
+//	}
 }

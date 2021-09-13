@@ -37,6 +37,14 @@ public class BreadthFirstSearch {
 	MCO.connect(PBI);
 	MIA.connect(PBI);
 	
-	graph.routeFromAtoB(HNL, BOS);
+	
+//			DFW---JFK---MIA---MCO
+//			 |	   |	 \	   /
+//			LAX	  BOS	   PBI
+//			/|\
+//		   / | \
+//		HNL	SAN EWR
+	
+	graph.routeFromAtoB(EWR, PBI);
 	} 
 }
